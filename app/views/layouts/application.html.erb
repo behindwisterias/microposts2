@@ -6,6 +6,8 @@
   <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
+
+<div style="float:left;">
 <body>
  <%= render 'layouts/header' %>
   <div class="container">
@@ -15,4 +17,7 @@
     <%= yield %>
   </div>
 </body>
+</div>
+
+
 </html>
