@@ -3,7 +3,7 @@
 <div style="float:left;">
 
   <div class="row">
-    <aside class="col-md-4">
+    <aside class="col-md-6">
       <section class="user_info">
         <%= render 'shared/user_info' %>
       </section>
@@ -16,8 +16,9 @@
 </div>
 
     
-    <div class="col-md-8">
-      <h3>Micropost Feed</h3>
+    <div class="col-md-6">
+      <h4><%= link_to "フォローしているユーザーの一覧", followings_user_path(current_user.id) %></h4>
+      <h4><%= link_to "フォローされているユーザーの一覧", followed_user_path(current_user.id) %></h4>
     </div>
    
 <% else %>
