@@ -1,7 +1,7 @@
 class UsersController < ApplicationController 
   before_action :set_user, only: [:edit, :update]
   
-  
+
   def followed #フォローされている人の一覧取得
     @user = User.find(params[:id])
     @followed = @user.followed_users
@@ -29,6 +29,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts
+    @page2 = @user.microposts.page(params[:page]).per(3)
   end
   
   def new
